@@ -1,0 +1,70 @@
+<div class="field1" >
+<h1 style="padding-left:380px;padding-top:20px;text-decoration:underline"">LISTING PRODUCTS</h1><br />
+
+<table>
+  <tr>
+  
+    <th class="field5">Name</th>
+	
+	
+    <th class="field6">Description</th>
+	
+    
+	<th class="field7">Price</th>
+	
+  </tr>
+ 
+
+ <% @products.each do |product| %>
+  <tr>
+  
+    <td  class="field8"><%= product.name %></td>
+	
+    <td class="field9"><%= product.description %></td>
+	
+    <td class="field10"><%= product.price %></td>
+	
+	<td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class =>'destroy ' %></td>
+    
+  </tr>
+  
+<% end %>
+</table>
+
+
+
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  </div>
+  </div>
+
+  <div class="field2">
+    &nbsp;&nbsp;&nbsp;<%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field3">
+    &nbsp;&nbsp;&nbsp;<%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field4">
+    &nbsp;&nbsp;&nbsp;<%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div><br />
+  <div class="actions">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;<%= f.submit %>
+  </div>
+ 
+<% end %>
+
+

@@ -1,0 +1,70 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.field2 input{
+margin-left:40px;
+width:300px;
+}
+.field3 input{
+margin-left:40px;
+width:300px;
+height:100px;
+}
+.field4 input{
+margin-left:40px;
+width:300px;
+}
+.actions:hover input
+{
+background-color:#FA6D69;
+}
+.actions:active input
+{
+background-color:#0955B8;
+}
+.field1
+{
+background-color:#4F6798;
+width:1100px;
+height:330px;
+}
+.field5 
+{
+text-decoration:underline;
+}
+.field6 {
+  padding-left:65px;
+ text-decoration:underline;
+}
+.field7 {
+ padding-left:100px;
+ text-decoration:underline;
+}
+.field8 {
+ padding-left:35px;
+}
+.field9 {
+  padding-left: 65px;
+}
+.field10{
+   padding-left:100px;
+}
+.destroy{
+padding-left:30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
